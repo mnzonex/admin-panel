@@ -5,14 +5,14 @@ let selectedUser = null;
 async function initAdmin() {
   const session = await window.checkSession();
   if (!session) {
-    window.location.href = '../login.html';
+    window.location.href = 'login.html';
     return;
   }
 
   // Admin Access Check
-  if (session.user.email !== 'admin@killersvip.com') {
+  if (session.user.email !== 'madhushanimsara849@gmail.com') {
     alert('Access Denied. Internal Admin Only.');
-    window.location.href = '../dashboard.html';
+    window.location.href = 'index.html';
     return;
   }
 
@@ -271,3 +271,4 @@ function showTab(tabId) {
 window.onload = initAdmin;
 document.getElementById('user-search').addEventListener('input', updateUserTable);
 document.getElementById('status-filter').addEventListener('change', updateUserTable);
+
